@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+  <container>
+
+    <Header/>
+    <Navigation/>
+<section>
+    <KursAnsicht/>
+</section>
+
+
+  </container>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+autosize(document.querySelector('section'));
+import Header from './components/Header';
+import KursAnsicht from './components/KursAnsicht';
+import Navigation from './components/Navigation'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Header,
+    KursAnsicht,
+    Navigation,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
